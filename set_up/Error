@@ -1,0 +1,18 @@
+
+
+home/pi/test/env/lib/python3.11/site-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py:30: RuntimeWarning: I2C frequency is not settable in python, ignoring!
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/pi/test/CamStream/PiThermalCam/pithermalcam/web_server.py", line 153, in <module>
+    start_server()
+  File "/home/pi/test/CamStream/PiThermalCam/pithermalcam/web_server.py", line 134, in start_server
+    thermcam = pithermalcam(output_folder=output_folder)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/test/CamStream/PiThermalCam/pithermalcam/pi_therm_cam.py", line 50, in __init__
+    self.update_image_frame()
+  File "/home/pi/test/CamStream/PiThermalCam/pithermalcam/pi_therm_cam.py", line 227, in update_image_frame
+    self._pull_raw_image()
+  File "/home/pi/test/CamStream/PiThermalCam/pithermalcam/pi_therm_cam.py", line 91, in _pull_raw_image
+    self._raw_image=self._temps_to_rescaled_uints(self._raw_image,self._temp_min,self._temp_max)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: pithermalcam._temps_to_rescaled_uints() takes 2 positional arguments but 4 were given
