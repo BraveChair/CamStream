@@ -25,7 +25,7 @@ preview_on = False
 configured = False
 config = picam2.create_preview_configuration()
 
-save_directory = '/home/pi/test/CamStream/chessboard/hd_images'
+save_directory = '/home/raspi/test/brave_repo/chessboard/hd_images'
 
 
 def hd_cam_off():
