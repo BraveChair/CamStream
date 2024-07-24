@@ -1,0 +1,17 @@
+
+To tell meson where tensorflow-lite is:
+
+1. Create program /usr/local/lib/pkgconfig/tensorflow-lite.pc:
+
+    prefix=/usr/local
+    exec_prefix=${prefix}
+    libdir=${ exec_prefix} /lib
+    includedir=${prefix} / include
+
+    Name: tensorflow-lite
+    Description: TensorFlow Lite library
+    Version: 2.16.1
+    Cflags: -I${includedir}
+    Libs: -L${ libdir} -ltensorflow-lite
+
+2. Install to /usr/local

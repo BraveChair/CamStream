@@ -131,7 +131,7 @@ def capture_image():
 	filename = save_directory + "/no" + str(current_number) +".jpg"
 	
 	#set up for capture
-	capture_config = picam2.create_still_configuration()
+	capture_config = picam2.create_still_configuration(main={"size":(2078,1520)})
 	picam2.switch_mode_and_capture_file(capture_config, filename)
 	
 	# need to crop image size to managable level
