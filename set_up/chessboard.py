@@ -22,7 +22,7 @@ prev_img_shape = None
  
 # Extracting path of individual image stored in a given directory
 # change for running on laptop!
-images = glob.glob('/home/pi/test/CamStream/chessboard/hd_images/*.jpg')
+images = glob.glob('/home/raspi/test/brave_repo/chessboard/hd_images/*.jpg')
 for fname in images:
     img = cv2.imread(fname)
     gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
@@ -44,6 +44,7 @@ for fname in images:
  
         # Draw and display the corners
         img = cv2.drawChessboardCorners(img, CHECKERBOARD, corners2, ret)
+        print("corners on!")
      
     cv2.imshow('img',img)
     cv2.waitKey(0)
