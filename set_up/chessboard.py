@@ -46,7 +46,11 @@ for fname in images:
         img = cv2.drawChessboardCorners(img, CHECKERBOARD, corners2, ret)
         print("corners on!")
      
-    cv2.imshow('img',img)
+    # Resize the image for display
+    img = cv2.resize(img, (800, 600))  # Change the size as needed
+    cv2.namedWindow('img', cv2.WINDOW_NORMAL)
+    cv2.imshow('img', img)
+    cv2.resizeWindow('img', 800, 600)  # Change the window size as needed
     cv2.waitKey(0)
  
 cv2.destroyAllWindows()
